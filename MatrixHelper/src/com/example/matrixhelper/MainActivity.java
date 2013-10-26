@@ -18,14 +18,7 @@ public class MainActivity extends Activity {
 	public void test(View v) {
 		TextView one;
 		one = (TextView)findViewById(R.id.txtOne);
-		Matrix m = new Matrix(1, 1);
-		m.val[0][0] = 1337;
-		Vector<Matrix> mat = new Vector<Matrix>();
-		mat.add(m);
-		//one.setText(Integer.toString(mat.get(0).val[0][0]));
-		mat.add(new Matrix(1, 1));
-		mat.get(1).val[0][0] = 1338;
-		one.setText(Integer.toString(mat.get(1).val[0][0]));
+		
 	}
 
 	Matrix addMatrices (Matrix a, Matrix b) {
@@ -35,7 +28,7 @@ public class MainActivity extends Activity {
 		} else if (a.n != b.n){
 
 		}
-		c = new Matrix (a.m, a.n);
+		c = new Matrix (a.m, a.n, new int[a.m][a.n]);
 		for (int i=0; i<a.m; i++) {
 			for (int j=0; j<a.n; j++) {
 				c.val[i][j] = a.val[i][j] + b.val[i][j];
