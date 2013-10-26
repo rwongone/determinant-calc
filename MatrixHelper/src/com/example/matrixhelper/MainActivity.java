@@ -19,6 +19,10 @@ public class MainActivity extends Activity {
     	TextView one;
     	one = (TextView)findViewById(R.id.txtOne);
     	one.setText("asdf");
+    	
+    	Matrix m = new Matrix(1, 1);
+    	m.val[0][0] = 1337;
+    	one.setText(Integer.toString(m.val[0][0]));
     }
 
     @Override
