@@ -10,9 +10,11 @@ public class Matrix {
 	public Matrix (int M, int N) { // create an MxN matrix
 		m = M;
 		n = N;
-		int a = 3;
-		int b = 5;
 		val = new int[m][n];
 	}
+	
+	// determinant
+	// RREF form
+	// invertibility, if invertible then inverse
 	
 }
