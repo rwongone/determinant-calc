@@ -11,6 +11,7 @@ public class Matrix {
 		m = M;
 		n = N;
 		int a = 3;
+		int b = 5;
 		val = new int[m][n];
 	}
 	
