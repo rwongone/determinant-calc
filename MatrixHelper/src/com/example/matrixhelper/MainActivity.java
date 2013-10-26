@@ -3,6 +3,8 @@ package com.example.matrixhelper;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
+
 
 public class MainActivity extends Activity {
 
@@ -11,7 +13,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+    
+    public void test() {
+    	TextView one;
+    	one = (TextView)findViewById(R.id.txtOne);
+    	one.setText("asdf");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
