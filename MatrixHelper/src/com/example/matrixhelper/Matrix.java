@@ -10,6 +10,7 @@ public class Matrix {
 	public Matrix (int M, int N) { // create an MxN matrix
 		m = M;
 		n = N;
+		int a = 3;
 		val = new int[m][n];
 	}
 	
