@@ -13,7 +13,6 @@ public class Matrix {
 		int a = 3;
 		int b = 5;
 		val = new int[m][n];
-		//dfjaksdjfksakfd
 	}
 	
 }

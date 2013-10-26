@@ -22,7 +22,7 @@
         android:layout_alignLeft="@+id/txtOne"
         android:layout_below="@+id/txtOne"
         android:layout_marginTop="74dp"
-        android:onClick="test()"
+        android:onClick="test"
         android:text="@string/btnOne" />
 
 </RelativeLayout>
