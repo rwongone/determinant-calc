@@ -24,5 +24,7 @@
     <string name="okeh">OKEH</string>
     <string name="pls">Please enter the element in row</string>
     <string name="pliss">Row 0, Column 0</string>
+    <string name="oneone">Row 1, Column 1</string>
+    <string name="zero">0</string>
 
 </resources>

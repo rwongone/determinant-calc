@@ -26,7 +26,7 @@ public class EnterMatrix extends Activity {
 		Intent mIntent = getIntent();
 		rows = mIntent.getIntExtra("m", 0);
 		cols = mIntent.getIntExtra("n", 0);
-		TextView txt = (TextView)findViewById(R.id.textView1);
+		TextView txt = (TextView)findViewById(R.id.txt);
 		txt.setText("User is filling a " + rows + " x " + cols + " matrix.");
 		// Show the Up button in the action bar.
 		values = new double[rows][cols];
@@ -37,14 +37,19 @@ public class EnterMatrix extends Activity {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
-		values[a][b] = Integer.parseInt(input.getText().toString());
-		prompt.setText("Row " + a + ", Column " + b + ":");
+		if (input.getText().toString().equals("")) {
+			values[a][b] = 0;
+		} else {
+			values[a][b] = Double.parseDouble(input.getText().toString());
+		}
+		
 		input.setText("");
 		b++;
 		if (b == cols) {
 			b = 0;
 			a++;
 		}
+		prompt.setText("Row " + (a+1) + ", Column " + (b+1) + ":");
 		if (a == rows) {
 			prompt.setText("The determinant of your matrix thing is:");
 			Matrix m = new Matrix(rows, cols, values);

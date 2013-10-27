@@ -30,15 +30,6 @@
      </GridView>
 
      <TextView
-         android:id="@+id/textView1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/gridView1"
-         android:layout_alignParentBottom="true"
-         android:layout_marginLeft="17dp"
-         android:text="TextView" />
-
-     <TextView
          android:id="@+id/prompt"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
@@ -54,7 +45,7 @@
          android:layout_alignLeft="@+id/gridView1"
          android:layout_below="@+id/prompt"
          android:ems="10"
-         android:inputType="numberSigned|numberDecimal" >
+         android:inputType="numberDecimal" >
 
          <requestFocus />
      </EditText>
@@ -68,5 +59,13 @@
          android:layout_alignParentRight="true"
          android:onClick="click"
          android:text="@string/okeh" />
+
+     <TextView
+         android:id="@+id/txt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:text="asdf" />
 
 </RelativeLayout>
