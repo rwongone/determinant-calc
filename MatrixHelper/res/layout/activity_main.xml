@@ -9,12 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    
+    
+    
+    
+    
     <TextView
         android:id="@+id/txtOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/instruc1" />
 
+    
+    
 
 
     <Button
@@ -25,6 +32,18 @@
         android:layout_centerVertical="true"
         android:onClick="test"
         android:text="@string/btnOne" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button1"
+        android:onClick="goToEnterMatrix"
+        android:text="@string/btnTwo"/>
+    
+    
+    
+    
 	<TextView
 	    android:layout_below="@id/txtOne"
 	    android:id="@+id/txtTwo"
@@ -37,7 +56,14 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="@string/colTxt"
-	    android:layout_toRightOf="@id/txtTwo"/>
+	    android:layout_centerHorizontal="true"/>
+	
+	
+	
+	
+	
+	
+	
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
@@ -48,7 +74,7 @@
         android:id="@+id/spinner2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/spinner"
-        android:layout_below="@id/txtTwo" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtThree" />
 
 </RelativeLayout>

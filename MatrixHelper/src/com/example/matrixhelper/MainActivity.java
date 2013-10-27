@@ -2,6 +2,7 @@ package com.example.matrixhelper;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
 				R.array.row_col_array,android.R.layout.simple_spinner_item);
 		// Specify the layout to use when the list of choices appears
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
 		spinner2.setAdapter(adapter2);
@@ -33,6 +34,10 @@ public class MainActivity extends Activity {
 		one = (TextView)findViewById(R.id.txtOne);
 		Matrix m = new Matrix(3, 3, new int[][] {{1, 6, 7}, {-2, 0, 4}, {-5, 2, 3}});
 		one.setText(Double.toString(m.determinant));
+	}
+	public void goToEnterMatrix(View v){
+		Intent intent = new Intent(this, EnterMatrix.class);
+		startActivity(intent);
 	}
 
 	Matrix addMatrices (Matrix a, Matrix b) {

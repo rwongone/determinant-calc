@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#228B22</color>
+    <color name="maroon">#8E2323</color>
+    <color name="teal">#008080</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF6600</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="lime">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#990099</color>
+    <color name="pink">#FF0066</color>
+    <color name="mainMenu">#FF0000</color>
+</resources>
