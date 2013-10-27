@@ -24,6 +24,7 @@ public class EnterMatrix extends Activity {
 	TextView prompt = (TextView)findViewById(R.id.prompt);
 	EditText input = (EditText)findViewById(R.id.input);
 	Button ok = (Button)findViewById(R.id.ok);
+	int[][] values = new int[rows][cols];
 	static final String[] numbers = new String[] {"a"};
 	@Override
 	
@@ -33,22 +34,22 @@ public class EnterMatrix extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
 		// Show the Up button in the action bar.
-		setupActionBar();
+		
 		Intent mIntent = getIntent();
 		rows = mIntent.getIntExtra("m", 0);
 		cols = mIntent.getIntExtra("n", 0);
-		GridView gridView = (GridView)findViewById(R.id.gridView1);
-		gridView.setNumColumns(cols);
+		//GridView gridView = (GridView)findViewById(R.id.gridView1);
+		//gridView.setNumColumns(cols);
 		TextView txt = (TextView)findViewById(R.id.textView1);
 		txt.setText(rows + ", " + cols);
-		
+		setupActionBar();
 	}
 	
 	void click() {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
-		int[][] values = new int[rows][cols];
+		
 		
 		values[a][b] = Integer.parseInt(input.getText().toString());
 		b++;
