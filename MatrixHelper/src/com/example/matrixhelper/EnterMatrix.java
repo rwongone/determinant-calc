@@ -20,9 +20,6 @@ public class EnterMatrix extends Activity {
 	int b = 0;
 	int rows, cols;
 	int[][] values;
-	TextView prompt = (TextView)findViewById(R.id.prompt);
-	EditText input = (EditText)findViewById(R.id.input);
-	Button ok = (Button)findViewById(R.id.ok);
 	@Override
 	
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +34,11 @@ public class EnterMatrix extends Activity {
 		values = new int[rows][cols];
 		setupActionBar();
 	}
-	/*
+	
 	void click() {
+		TextView prompt = (TextView)findViewById(R.id.prompt);
+		EditText input = (EditText)findViewById(R.id.input);
+		Button ok = (Button)findViewById(R.id.ok);
 		values[a][b] = Integer.parseInt(input.getText().toString());
 		b++;
 		if (b == cols) {
@@ -52,7 +52,7 @@ public class EnterMatrix extends Activity {
 			ok.setClickable(false);
 		}
 	}
-	*/
+	
 	
 	public void mainMenuClicked(View v){
 		Intent intent = new Intent(this, MainActivity.class);
