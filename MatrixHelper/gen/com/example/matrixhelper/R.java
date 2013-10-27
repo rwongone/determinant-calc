@@ -75,6 +75,7 @@ public final class R {
         public static final int instruc1=0x7f060003;
         public static final int mainMenu=0x7f060008;
         public static final int okeh=0x7f06000b;
+        public static final int pliss=0x7f06000d;
         public static final int pls=0x7f06000c;
         public static final int rowTxt=0x7f060006;
         public static final int title_activity_enter_matrix=0x7f060009;

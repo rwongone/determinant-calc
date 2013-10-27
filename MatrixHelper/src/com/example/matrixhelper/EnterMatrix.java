@@ -17,6 +17,13 @@ import android.os.Build;
 
 
 public class EnterMatrix extends Activity {
+	int a = 0;
+	int b = 0;
+	int rows, cols;
+	int[][] values;
+	TextView prompt = (TextView)findViewById(R.id.prompt);
+	EditText input = (EditText)findViewById(R.id.input);
+	Button ok = (Button)findViewById(R.id.ok);
 	static final String[] numbers = new String[] {"a"};
 	@Override
 	
@@ -34,31 +41,18 @@ public class EnterMatrix extends Activity {
 		gridView.setNumColumns(cols);
 		TextView txt = (TextView)findViewById(R.id.textView1);
 		txt.setText(rows + ", " + cols);
-		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(, findViewById(R.id.gridView1), numbers);
 		
+	}
+	
+	void click() {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
 		int[][] values = new int[rows][cols];
-		for (int i=0; i<rows; i++) {
-			for (int j=0; j<cols; j++) {
-				prompt.setText("Row " + (i+1) + ", Column " + (j+1) + ": ");
-				input.setText("");
-				while (true) {
-					if (ok.isPressed()) {
-						break;
-					}
-				}
-				values[i][j] = Integer.parseInt(input.getText().toString());
-			}
-		}
+		
 		prompt.setText("The determinant of your matrix thing is:");
 		Matrix m = new Matrix(rows, cols, values);
 		input.setText(m.determinant+"");
-		
-		
-		
-		
 	}
 	
 	public void mainMenuClicked(View v){
