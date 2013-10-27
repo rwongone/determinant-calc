@@ -24,8 +24,11 @@ public class EnterMatrix extends Activity {
 	TextView prompt = (TextView)findViewById(R.id.prompt);
 	EditText input = (EditText)findViewById(R.id.input);
 	Button ok = (Button)findViewById(R.id.ok);
+<<<<<<< HEAD
 	int[][] values = new int[rows][cols];
 	static final String[] numbers = new String[] {"a"};
+=======
+>>>>>>> e3186cbcd9209a3216368a984736c604e0b9dc06
 	@Override
 	
 	
@@ -33,6 +36,7 @@ public class EnterMatrix extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
+<<<<<<< HEAD
 		// Show the Up button in the action bar.
 		
 		Intent mIntent = getIntent();
@@ -42,6 +46,15 @@ public class EnterMatrix extends Activity {
 		//gridView.setNumColumns(cols);
 		TextView txt = (TextView)findViewById(R.id.textView1);
 		txt.setText(rows + ", " + cols);
+=======
+		Intent mIntent = getIntent();
+		rows = mIntent.getIntExtra("m", 0);
+		cols = mIntent.getIntExtra("n", 0);
+		TextView txt = (TextView)findViewById(R.id.textView1);
+		txt.setText(rows + ", " + cols);
+		// Show the Up button in the action bar.
+		values = new int[rows][cols];
+>>>>>>> e3186cbcd9209a3216368a984736c604e0b9dc06
 		setupActionBar();
 	}
 	
@@ -49,7 +62,10 @@ public class EnterMatrix extends Activity {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e3186cbcd9209a3216368a984736c604e0b9dc06
 		
 		values[a][b] = Integer.parseInt(input.getText().toString());
 		b++;
