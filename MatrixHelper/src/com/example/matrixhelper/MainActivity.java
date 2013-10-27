@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	@Override
@@ -56,7 +55,7 @@ public class MainActivity extends Activity {
 		} else if (a.n != b.n){
 
 		}
-		c = new Matrix (a.m, a.n, new int[a.m][a.n]);
+		c = new Matrix (a.m, a.n, new double[a.m][a.n]);
 		for (int i=0; i<a.m; i++) {
 			for (int j=0; j<a.n; j++) {
 				c.val[i][j] = a.val[i][j] + b.val[i][j];

@@ -17,7 +17,7 @@ public class EnterMatrix extends Activity {
 	int a = 0;
 	int b = 0;
 	int rows, cols;
-	int[][] values;
+	double[][] values;
 	@Override
 	
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class EnterMatrix extends Activity {
 		TextView txt = (TextView)findViewById(R.id.textView1);
 		txt.setText("User is filling a " + rows + " x " + cols + " matrix.");
 		// Show the Up button in the action bar.
-		values = new int[rows][cols];
+		values = new double[rows][cols];
 		setupActionBar();
 	}
 	

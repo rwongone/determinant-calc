@@ -3,12 +3,12 @@ package com.example.matrixhelper;
 public class Matrix {
 	int m;
 	int n;
-	int[][] val;
+	double[][] val;
 	double determinant;
-	public Matrix (int M, int N, int[][] a) { // create an MxN matrix
+	public Matrix (int M, int N, double[][] a) { // create an MxN matrix
 		m = M;
 		n = N;
-		val = new int[m][n];
+		val = new double[m][n];
 
 		if (m == n) {
 			determinant = det(M, a);
@@ -17,7 +17,7 @@ public class Matrix {
 	
 	Matrix swap(Matrix mat, int A, int B) {
 		Matrix swapped = new Matrix(mat.m, mat.n, mat.val);
-		int[] tempRow = new int[mat.n];
+		double[] tempRow = new double[mat.n];
 		for (int i=0; i<n; i++) {
 			tempRow[i] = swapped.val[A][i];
 			swapped.val[A][i] = swapped.val[B][i];
@@ -26,7 +26,7 @@ public class Matrix {
 		return swapped;
 	}
 	
-	double det(int m, int[][] val) { // this assumes that mat is an nxn matrix
+	double det(int m, double[][] val) { // this assumes that mat is an nxn matrix
 		double toReturn = 0;
 		if (m < 1) {
 			return 0; // mathematically accurate?
@@ -35,7 +35,7 @@ public class Matrix {
 		} else if (m == 2) {
 			return (val[0][0] * val[1][1])-(val[0][1] * val[1][0]);
 		} else { // expansion by row 1, could later extend to expansion by best row OR column (r/c with most zeroes)
-			int[][] newVals = {{0}};
+			double[][] newVals = {{0.0}};
 			int bestRow = 0;
 			int bestCol = 0;
 			int max = -1;
@@ -68,9 +68,9 @@ public class Matrix {
 			
 			if (useRow == 1) {
 				for (int i=0; i<m; i++) { // for each element in the best row or column
-					int coefficient = val[bestRow][i];
+					double coefficient = val[bestRow][i];
 					if (coefficient == 0) continue;
-					newVals = new int[m-1][m-1];
+					newVals = new double[m-1][m-1];
 					int newRow = 0;
 					int newCol = 0;
 					for (int j=0; j<m; j++) { // add the element value times its cofactor to the sum
@@ -90,9 +90,9 @@ public class Matrix {
 				}
 			} else {
 				for (int i=0; i<m; i++) {
-					int coefficient = val[i][bestCol];
+					double coefficient = val[i][bestCol];
 					if (coefficient == 0) continue;
-					newVals = new int[m-1][m-1];
+					newVals = new double[m-1][m-1];
 					int newRow = 0;
 					int newCol = 0;
 					for (int j=0; j<m; j++) {
