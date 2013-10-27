@@ -5,10 +5,8 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -40,6 +38,8 @@ public class EnterMatrix extends Activity {
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
 		values[a][b] = Integer.parseInt(input.getText().toString());
+		prompt.setText("Row " + a + ", Column " + b + ":");
+		input.setText("");
 		b++;
 		if (b == cols) {
 			b = 0;
