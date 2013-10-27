@@ -35,8 +35,8 @@ public class EnterMatrix extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		Intent mIntent = getIntent();
-		int rows = mIntent.getIntExtra("m", 0);
-		int cols = mIntent.getIntExtra("n", 0);
+		rows = mIntent.getIntExtra("m", 0);
+		cols = mIntent.getIntExtra("n", 0);
 		GridView gridView = (GridView)findViewById(R.id.gridView1);
 		gridView.setNumColumns(cols);
 		TextView txt = (TextView)findViewById(R.id.textView1);
@@ -50,9 +50,18 @@ public class EnterMatrix extends Activity {
 		Button ok = (Button)findViewById(R.id.ok);
 		int[][] values = new int[rows][cols];
 		
-		prompt.setText("The determinant of your matrix thing is:");
-		Matrix m = new Matrix(rows, cols, values);
-		input.setText(m.determinant+"");
+		values[a][b] = Integer.parseInt(input.getText().toString());
+		b++;
+		if (b == cols) {
+			b = 0;
+			a++;
+		}
+		if (a == rows) {
+			prompt.setText("The determinant of your matrix thing is:");
+			Matrix m = new Matrix(rows, cols, values);
+			input.setText(m.determinant+"");
+			ok.setClickable(false);
+		}
 	}
 	
 	public void mainMenuClicked(View v){

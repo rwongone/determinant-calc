@@ -45,7 +45,7 @@
          android:layout_alignLeft="@+id/gridView1"
          android:layout_alignTop="@+id/gridView1"
          android:layout_marginTop="18dp"
-         android:text="@string/pls" />
+         android:text="@string/pliss" />
 
      <EditText
          android:id="@+id/input"
@@ -66,6 +66,7 @@
          android:layout_alignBaseline="@+id/input"
          android:layout_alignBottom="@+id/input"
          android:layout_alignParentRight="true"
+         android:onClick="click"
          android:text="@string/okeh" />
 
 </RelativeLayout>
