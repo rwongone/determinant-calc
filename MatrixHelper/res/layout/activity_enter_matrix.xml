@@ -24,8 +24,18 @@
          android:layout_below="@+id/mainMenu1"
          android:horizontalSpacing="@dimen/activity_horizontal_margin"
          android:numColumns="3"
-         android:verticalSpacing="@dimen/activity_horizontal_margin" >
+         android:verticalSpacing="@dimen/activity_horizontal_margin"
+         android:visibility="invisible" >
 
      </GridView>
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/gridView1"
+         android:layout_alignParentBottom="true"
+         android:layout_marginLeft="17dp"
+         android:text="TextView" />
 
 </RelativeLayout>

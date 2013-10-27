@@ -5,14 +5,17 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 
-public class EnterMatrix extends Activity {
 
+public class EnterMatrix extends Activity {
+	static final String[] numbers = new String[] {"a"};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,6 +27,9 @@ public class EnterMatrix extends Activity {
 		int cols = mIntent.getIntExtra("n", 0);
 		GridView gridView = (GridView)findViewById(R.id.gridView1);
 		gridView.setNumColumns(cols);
+		TextView txt = (TextView)findViewById(R.id.textView1);
+		txt.setText(rows + ", " + cols);
+		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(, findViewById(R.id.gridView1), numbers);
 		
 	}
 
