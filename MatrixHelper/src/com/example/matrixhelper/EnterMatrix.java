@@ -39,10 +39,6 @@ public class EnterMatrix extends Activity {
 	}
 	
 	void click() {
-		TextView prompt = (TextView)findViewById(R.id.prompt);
-		EditText input = (EditText)findViewById(R.id.input);
-		Button ok = (Button)findViewById(R.id.ok);
-		
 		values[a][b] = Integer.parseInt(input.getText().toString());
 		b++;
 		if (b == cols) {
