@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import java.util.Vector;
-
 public class MainActivity extends Activity {
 
 	@Override
@@ -33,7 +31,8 @@ public class MainActivity extends Activity {
 	public void test(View v) {
 		TextView one;
 		one = (TextView)findViewById(R.id.txtOne);
-		
+		Matrix m = new Matrix(2, 2, new int[][] {{1, 2}, {3 ,4}});
+		one.setText(Double.toString(m.determinant));
 	}
 
 	Matrix addMatrices (Matrix a, Matrix b) {
