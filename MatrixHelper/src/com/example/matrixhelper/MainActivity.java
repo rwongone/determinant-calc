@@ -36,7 +36,15 @@ public class MainActivity extends Activity {
 		one.setText(Double.toString(m.determinant));
 	}
 	public void goToEnterMatrix(View v){
+		int rows,cols;
+		Spinner rowSpin,colSpin;
+		rowSpin=(Spinner)findViewById(R.id.spinner);
+		colSpin=(Spinner)findViewById(R.id.spinner2);
+		rows = Integer.parseInt(rowSpin.getSelectedItem().toString());
+		cols = Integer.parseInt(colSpin.getSelectedItem().toString());
 		Intent intent = new Intent(this, EnterMatrix.class);
+		intent.putExtra("m", rows);
+		intent.putExtra("n", cols);
 		startActivity(intent);
 	}
 
