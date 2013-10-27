@@ -43,6 +43,7 @@ public final class R {
     }
     public static final class id {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int action_settings=0x7f0a0009;
         public static final int button1=0x7f0a0003;
         public static final int button2=0x7f0a0004;
@@ -54,6 +55,8 @@ public final class R {
         public static final int txtThree=0x7f0a0006;
         public static final int txtTwo=0x7f0a0005;
 =======
+=======
+>>>>>>> 4642d4825002668068bab02c38e79c2744be5c1b
         public static final int action_settings=0x7f0a0008;
         public static final int button1=0x7f0a0002;
         public static final int button2=0x7f0a0003;
@@ -63,6 +66,9 @@ public final class R {
         public static final int txtOne=0x7f0a0001;
         public static final int txtThree=0x7f0a0005;
         public static final int txtTwo=0x7f0a0004;
+<<<<<<< HEAD
+>>>>>>> 4642d4825002668068bab02c38e79c2744be5c1b
+=======
 >>>>>>> 4642d4825002668068bab02c38e79c2744be5c1b
     }
     public static final class layout {
