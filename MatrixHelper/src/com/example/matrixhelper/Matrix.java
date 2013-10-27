@@ -12,7 +12,7 @@ public class Matrix {
 		m = M;
 		n = N;
 		val = new int[m][n];
-		
+
 		if (m == n) {
 			determinant = det(M, a);
 		}
@@ -65,8 +65,10 @@ public class Matrix {
 						newCol = 0;
 						if (j != bestRow) {
 							for (int k=0; k<m; k++) { // j, k go through original matrix mat
-								newVals[newRow][newCol] = val[j][k];
-								newCol++;
+								if (k != i) {
+									newVals[newRow][newCol] = val[j][k];
+									newCol++;	
+								}
 							}
 							newRow++;
 						}
@@ -83,8 +85,10 @@ public class Matrix {
 						newRow = 0;
 						if (j != bestCol) {
 							for (int k=0; k<m; k++) {
-								newVals[newRow][newCol] = val[k][j];
-								newRow++;
+								if (k != i) {
+									newVals[newRow][newCol] = val[k][j];
+									newRow++;
+								}
 							}
 							newCol++;
 						}
