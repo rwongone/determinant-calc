@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.GridView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -18,6 +19,12 @@ public class EnterMatrix extends Activity {
 		setContentView(R.layout.activity_enter_matrix);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		Intent mIntent = getIntent();
+		int rows = mIntent.getIntExtra("m", 0);
+		int cols = mIntent.getIntExtra("n", 0);
+		GridView gridView = (GridView)findViewById(R.id.gridView1);
+		gridView.setNumColumns(cols);
+		
 	}
 
 	
