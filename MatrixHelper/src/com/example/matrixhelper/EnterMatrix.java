@@ -37,7 +37,7 @@ public class EnterMatrix extends Activity {
 		values = new int[rows][cols];
 		setupActionBar();
 	}
-	/*
+	
 	void click() {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
@@ -56,7 +56,7 @@ public class EnterMatrix extends Activity {
 			ok.setClickable(false);
 		}
 	}
-	*/
+	
 	
 	public void mainMenuClicked(View v){
 		Intent intent = new Intent(this, MainActivity.class);
