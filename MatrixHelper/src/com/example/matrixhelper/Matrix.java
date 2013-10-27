@@ -18,11 +18,22 @@ public class Matrix {
 		}
 	}
 	
+	Matrix swap(Matrix mat, int A, int B) {
+		Matrix swapped = new Matrix(mat.m, mat.n, mat.val);
+		int[] tempRow = new int[mat.n];
+		for (int i=0; i<n; i++) {
+			tempRow[i] = swapped.val[A][i];
+			swapped.val[A][i] = swapped.val[B][i];
+			swapped.val[B][i] = tempRow[i];
+		}
+		return swapped;
+	}
+	
 	double det(int m, int[][] val) { // this assumes that mat is an nxn matrix
 		double toReturn = 0;
 		if (m < 1) {
 			return 0; // mathematically accurate?
-		} else if (m== 1) {
+		} else if (m == 1) {
 			return val[0][0];
 		} else if (m == 2) {
 			return (val[0][0] * val[1][1])-(val[0][1] * val[1][0]);
