@@ -16,16 +16,17 @@ import android.content.Intent;
 import android.os.Build;
 
 public class EnterMatrix extends Activity {
-	int a = 0;
-	int b = 0;
-	int rows, cols;
-	int[][] values;
-	TextView prompt = (TextView)findViewById(R.id.prompt);
-	EditText input = (EditText)findViewById(R.id.input);
-	Button ok = (Button)findViewById(R.id.ok);
+	
 	@Override
 	
 	protected void onCreate(Bundle savedInstanceState) {
+		int a = 0;
+		int b = 0;
+		int rows, cols;
+		int[][] values;
+		TextView prompt = (TextView)findViewById(R.id.prompt);
+		EditText input = (EditText)findViewById(R.id.input);
+		Button ok = (Button)findViewById(R.id.ok);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
 		Intent mIntent = getIntent();
@@ -37,7 +38,7 @@ public class EnterMatrix extends Activity {
 		values = new int[rows][cols];
 		setupActionBar();
 	}
-	
+	/*
 	void click() {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
@@ -56,6 +57,7 @@ public class EnterMatrix extends Activity {
 			ok.setClickable(false);
 		}
 	}
+	*/
 	
 	public void mainMenuClicked(View v){
 		Intent intent = new Intent(this, MainActivity.class);
