@@ -15,7 +15,6 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 
-
 public class EnterMatrix extends Activity {
 	int a = 0;
 	int b = 0;
@@ -26,8 +25,6 @@ public class EnterMatrix extends Activity {
 	Button ok = (Button)findViewById(R.id.ok);
 	@Override
 	
-	
-	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
@@ -35,7 +32,7 @@ public class EnterMatrix extends Activity {
 		rows = mIntent.getIntExtra("m", 0);
 		cols = mIntent.getIntExtra("n", 0);
 		TextView txt = (TextView)findViewById(R.id.textView1);
-		txt.setText(rows + ", " + cols);
+		txt.setText("User is filling a " + rows + " x " + cols + " matrix.");
 		// Show the Up button in the action bar.
 		values = new int[rows][cols];
 		setupActionBar();
