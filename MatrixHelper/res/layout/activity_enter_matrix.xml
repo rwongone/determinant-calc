@@ -38,4 +38,34 @@
          android:layout_marginLeft="17dp"
          android:text="TextView" />
 
+     <TextView
+         android:id="@+id/prompt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/gridView1"
+         android:layout_alignTop="@+id/gridView1"
+         android:layout_marginTop="18dp"
+         android:text="@string/pls" />
+
+     <EditText
+         android:id="@+id/input"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/gridView1"
+         android:layout_below="@+id/prompt"
+         android:ems="10"
+         android:inputType="number" >
+
+         <requestFocus />
+     </EditText>
+
+     <Button
+         android:id="@+id/ok"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/input"
+         android:layout_alignBottom="@+id/input"
+         android:layout_alignParentRight="true"
+         android:text="@string/okeh" />
+
 </RelativeLayout>

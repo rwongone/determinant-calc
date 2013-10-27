@@ -21,5 +21,7 @@
 
     <string name="title_activity_enter_matrix">EnterMatrix</string>
     <string name="title_activity_input_values">InputValues</string>
+    <string name="okeh">OKEH</string>
+    <string name="pls">Please enter the element in row</string>
 
 </resources>

@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
@@ -17,6 +19,9 @@ import android.os.Build;
 public class EnterMatrix extends Activity {
 	static final String[] numbers = new String[] {"a"};
 	@Override
+	
+	
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
@@ -31,8 +36,30 @@ public class EnterMatrix extends Activity {
 		txt.setText(rows + ", " + cols);
 		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(, findViewById(R.id.gridView1), numbers);
 		
+		TextView prompt = (TextView)findViewById(R.id.prompt);
+		EditText input = (EditText)findViewById(R.id.input);
+		Button ok = (Button)findViewById(R.id.ok);
+		int[][] values = new int[rows][cols];
+		for (int i=0; i<rows; i++) {
+			for (int j=0; j<cols; j++) {
+				prompt.setText("Row " + (i+1) + ", Column " + (j+1) + ": ");
+				input.setText("");
+				while (true) {
+					if (ok.isPressed()) {
+						break;
+					}
+				}
+				values[i][j] = Integer.parseInt(input.getText().toString());
+			}
+		}
+		prompt.setText("The determinant of your matrix thing is:");
+		Matrix m = new Matrix(rows, cols, values);
+		input.setText(m.determinant+"");
+		
+		
+		
+		
 	}
-
 	
 	public void mainMenuClicked(View v){
 		Intent intent = new Intent(this, MainActivity.class);
