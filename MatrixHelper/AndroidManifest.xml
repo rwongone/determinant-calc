@@ -30,6 +30,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.matrixhelper.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.matrixhelper.InputValues"
+            android:label="@string/title_activity_input_values"
+            android:parentActivityName="com.example.matrixhelper.EnterMatrix" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.matrixhelper.EnterMatrix" />
+        </activity>
     </application>
 
 </manifest>

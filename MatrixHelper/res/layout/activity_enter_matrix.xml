@@ -16,4 +16,16 @@
         android:text="@string/mainMenu"
         android:onClick="mainMenuClicked"/>
 
+     <GridView
+         android:id="@+id/gridView1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/mainMenu1"
+         android:layout_below="@+id/mainMenu1"
+         android:horizontalSpacing="@dimen/activity_horizontal_margin"
+         android:numColumns="3"
+         android:verticalSpacing="@dimen/activity_horizontal_margin" >
+
+     </GridView>
+
 </RelativeLayout>

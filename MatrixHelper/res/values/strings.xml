@@ -20,5 +20,6 @@
     </string-array>
 
     <string name="title_activity_enter_matrix">EnterMatrix</string>
+    <string name="title_activity_input_values">InputValues</string>
 
 </resources>
