@@ -54,7 +54,7 @@
          android:layout_alignLeft="@+id/gridView1"
          android:layout_below="@+id/prompt"
          android:ems="10"
-         android:inputType="number" >
+         android:inputType="numberSigned" >
 
          <requestFocus />
      </EditText>
