@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 	public void test(View v) {
 		TextView one;
 		one = (TextView)findViewById(R.id.txtOne);
-		Matrix m = new Matrix(2, 2, new int[][] {{1, 2}, {3 ,4}});
+		Matrix m = new Matrix(3, 3, new int[][] {{1, 6, 7}, {-2, 0, 4}, {-5, 2, 3}});
 		one.setText(Double.toString(m.determinant));
 	}
 
