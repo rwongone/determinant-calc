@@ -35,7 +35,7 @@ public class EnterMatrix extends Activity {
 		setupActionBar();
 	}
 	
-	void click() {
+	public void click(View v) {
 		TextView prompt = (TextView)findViewById(R.id.prompt);
 		EditText input = (EditText)findViewById(R.id.input);
 		Button ok = (Button)findViewById(R.id.ok);
