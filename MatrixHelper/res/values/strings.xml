@@ -3,7 +3,15 @@
 
     <string name="app_name">MatrixHelper</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="btnOne">Button</string>
-
+    <string name="hello_world">Choose the Number of Rows and Columns</string>
+    <string name="btnOne">Create Matrix</string>
+    <string name="rowTxt"># of Rows</string>
+    <string name="colTxt"># of Cols</string>
+	<string-array name="row_col_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
