@@ -23,13 +23,22 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.matrixhelper.DeterminantCalc"
+            android:label="@string/title_activity_determinant_calc"
+            android:parentActivityName="com.example.cookie.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cookie.MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.matrixhelper.EnterMatrix"
             android:label="@string/title_activity_enter_matrix"
             android:parentActivityName="com.example.matrixhelper.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.matrixhelper.MainActivity" />
+                android:value="com.example.matrixhelper.DeterminantCalc" />
         </activity>
+        
     </application>
 
 </manifest>

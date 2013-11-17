@@ -8,45 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    
-    
-    
-    
-    
-    <TextView
-        android:id="@+id/txtOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/instruc1" />
-
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/menu1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="goToEnterMatrix"
-        android:text="@string/btnTwo" />
-    
-	<TextView
-	    android:layout_below="@id/txtOne"
-	    android:id="@+id/txtTwo"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/rowTxt"/>
-
-	
-	
-	
-	
-	
-	
-	
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtTwo" />
-
+        android:layout_marginTop="28dp"
+        android:onClick="goToDetCalc"
+        android:text="@string/menu1" />
 
 </RelativeLayout>

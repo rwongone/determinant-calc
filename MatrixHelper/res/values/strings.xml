@@ -25,5 +25,7 @@
     <string name="pliss">Row 0, Column 0</string>
     <string name="oneone">Row 1, Column 1</string>
     <string name="zero">0</string>
+    <string name="title_activity_determinant_calc">DeterminantCalc</string>
+    <string name="menu1">Determinant Calculator</string>
 
 </resources>

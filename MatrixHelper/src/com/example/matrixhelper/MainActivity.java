@@ -5,22 +5,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Spinner spinnerone = (Spinner) findViewById(R.id.spinner);
-		// Create an ArrayAdapter using the string array and a default spinner layout
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-				R.array.row_col_array, android.R.layout.simple_spinner_item);
-		// Specify the layout to use when the list of choices appears
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		// Apply the adapter to the spinner
-		spinnerone.setAdapter(adapter);
+		
 	}
 /*
 	public void test(View v) {
@@ -30,15 +21,8 @@ public class MainActivity extends Activity {
 		one.setText(Double.toString(m.determinant));
 	}
 */
-	public void goToEnterMatrix(View v){
-		int rows,cols;
-		Spinner rowSpin;
-		rowSpin=(Spinner)findViewById(R.id.spinner);
-		rows = Integer.parseInt(rowSpin.getSelectedItem().toString());
-		cols = rows;
-		Intent intent = new Intent(this, EnterMatrix.class);
-		intent.putExtra("m", rows);
-		intent.putExtra("n", cols);
+	public void goToDetCalc(View v){
+		Intent intent = new Intent(this, DeterminantCalc.class);
 		startActivity(intent);
 	}
 
