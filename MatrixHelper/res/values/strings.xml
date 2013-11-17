@@ -7,8 +7,7 @@
     <string name="instruc1">Choose the Number of Rows and Columns</string>
     <string name="btnOne">The Richard Button</string>
     <string name="btnTwo">Create Matrix</string>
-    <string name="rowTxt"># of Rows</string>
-    <string name="colTxt"># of Cols</string>
+    <string name="rowTxt">How many rows/Cols?</string>
     <string name="mainMenu">Return to the Menu</string>
 
     <string-array name="row_col_array">

@@ -34,13 +34,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="@string/rowTxt"/>
-	<TextView
-	    android:layout_below="@id/txtOne"
-	    android:id="@+id/txtThree"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/colTxt"
-	    android:layout_centerHorizontal="true"/>
+
 	
 	
 	
@@ -54,11 +48,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtTwo" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/txtTwo" />
 
 </RelativeLayout>

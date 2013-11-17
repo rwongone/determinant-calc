@@ -14,18 +14,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Spinner spinnerone = (Spinner) findViewById(R.id.spinner);
-		Spinner spinnertwo=(Spinner)findViewById(R.id.spinner2);
 		// Create an ArrayAdapter using the string array and a default spinner layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 				R.array.row_col_array, android.R.layout.simple_spinner_item);
-		ArrayAdapter<CharSequence> adapter2=ArrayAdapter.createFromResource(this,
-				R.array.row_col_array,android.R.layout.simple_spinner_item);
 		// Specify the layout to use when the list of choices appears
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spinnerone.setAdapter(adapter);
-		spinnertwo.setAdapter(adapter2);
 	}
 /*
 	public void test(View v) {
@@ -37,11 +32,10 @@ public class MainActivity extends Activity {
 */
 	public void goToEnterMatrix(View v){
 		int rows,cols;
-		Spinner rowSpin,colSpin;
+		Spinner rowSpin;
 		rowSpin=(Spinner)findViewById(R.id.spinner);
-		colSpin=(Spinner)findViewById(R.id.spinner2);
 		rows = Integer.parseInt(rowSpin.getSelectedItem().toString());
-		cols = Integer.parseInt(colSpin.getSelectedItem().toString());
+		cols = rows;
 		Intent intent = new Intent(this, EnterMatrix.class);
 		intent.putExtra("m", rows);
 		intent.putExtra("n", cols);
