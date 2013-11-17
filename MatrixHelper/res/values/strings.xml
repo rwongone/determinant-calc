@@ -9,6 +9,7 @@
     <string name="btnTwo">Create Matrix</string>
     <string name="rowTxt">How many rows/Cols?</string>
     <string name="mainMenu">Return to the Menu</string>
+    <string name="test">what does the fox say?</string>
 
     <string-array name="row_col_array">
         <item>1</item>
@@ -27,5 +28,8 @@
     <string name="zero">0</string>
     <string name="title_activity_determinant_calc">DeterminantCalc</string>
     <string name="menu1">Determinant Calculator</string>
+    <string name="title_activity_input_single_matrix">InputSingleMatrix</string>
+    <string name="description">holds the image</string>
+    <string name="title_activity_full_image_Activity">Viewing Full sized Image</string>
 
 </resources>

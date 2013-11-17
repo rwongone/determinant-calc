@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="18" />
 
     <application
@@ -13,6 +13,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        
+        
+        <!-- MAIN MENU -->
         <activity
             android:name="com.example.matrixhelper.MainActivity"
             android:label="@string/app_name" >
@@ -22,14 +26,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- DETERMINANT CALCULATOr -->
         <activity
             android:name="com.example.matrixhelper.DeterminantCalc"
             android:label="@string/title_activity_determinant_calc"
-            android:parentActivityName="com.example.cookie.MainActivity" >
+            android:parentActivityName="com.example.matrixhelper.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cookie.MainActivity" />
         </activity>
+        
+        <!-- ENTER MATRIX WORKS -->
         <activity
             android:name="com.example.matrixhelper.EnterMatrix"
             android:label="@string/title_activity_enter_matrix"
@@ -38,6 +46,28 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.matrixhelper.DeterminantCalc" />
         </activity>
+        
+        
+        <!-- INPUT SINGLE MATRIX -->
+        <activity
+            android:name="com.example.matrixhelper.InputSingleMatrix"
+            android:label="@string/title_activity_input_single_matrix"
+            android:parentActivityName="com.example.matrixhelper.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.matrixhelper.MainActivity" />
+        </activity>
+        
+        
+        <!-- FullImageActivity -->
+        <activity
+            android:name="com.example.matrixhelper.FullImageActivity"
+            android:label="@string/title_activity_full_image_Activity"
+            android:parentActivityName="com.example.matrixhelper.InputSingleMatrix">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.matrixhelper.InputSingleMatrix" />
+            </activity>
         
     </application>
 

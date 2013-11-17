@@ -24,11 +24,11 @@ public class EnterMatrix extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_matrix);
 		Intent mIntent = getIntent();
+		// get the number of rows and columns from the intent
 		rows = mIntent.getIntExtra("m", 0);
 		cols = mIntent.getIntExtra("n", 0);
 		TextView txt = (TextView)findViewById(R.id.txt);
 		txt.setText("User is filling a " + rows + " x " + cols + " matrix.");
-		// Show the Up button in the action bar.
 		values = new double[rows][cols];
 		setupActionBar();
 	}
